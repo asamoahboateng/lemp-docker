@@ -1,0 +1,9 @@
+./.env
+
+.env
+
+.docker/mysql/mysqldata
+
+.docker/mysql/mysqldata/*
+
+
