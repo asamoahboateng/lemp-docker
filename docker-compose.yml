@@ -27,12 +27,11 @@ services:
       - ./:/var/www/html
       - ./.docker/php/:/usr/local/etc/php/
     build: ./.docker/
-    command: bash -c "chmod -R 777 /var/www/html/web/sites/default && php-fpm"
     environment:
-      - SMTP_HOST=smtp.gmail.com
-      - SMTP_PORT=587
-      - SMTP_USER=your-email@gmail.com
-      - SMTP_PASSWORD=your-email-password
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
 
   # MySQL Service
   db:
